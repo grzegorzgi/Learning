@@ -1,51 +1,51 @@
-Rozproszony system kontroli wersji, który pozwala na œledzenie zmian w projekcie w trakcie jego rozwijania.
+Rozproszony system kontroli wersji, ktÃ³ry pozwala na Å›ledzenie zmian w projekcie w trakcie jego rozwijania.
 
-Stany plików:
+Stany plikÃ³w:
 
-Zmodyfikowany (modified) ------git add-----> œledzony (staged) -----git commit---->zatwierdony (commited)
+Zmodyfikowany (modified) ------git add-----> Å›ledzony (staged) -----git commit---->zatwierdony (commited)
 
 
 git remote add origin <remote_name> <remote_repo_url> - mapowanie lokalnego repozytroium do repozytorium zdalnego
-git init - 	inicjacja lokalnego repozytorium w akutalnym katalogu  (tworzone s¹ pkiki gita - .git)
+git init - 	inicjacja lokalnego repozytorium w akutalnym katalogu  (tworzone sÄ… pkiki gita - .git)
 git add - 	dodaje pliki do repozytorium (./--all dodaje wszystko)
-git rm - 	usuwanie plików z repozytorium --> potem commit
+git rm - 	usuwanie plikÃ³w z repozytorium --> potem commit
 git clone [URL] - klonuje repozytorium zdalne 
-git status - 	sprawdzenie stanu plików
-git diff - 	dok³adne informacje o zmianach
+git status - 	sprawdzenie stanu plikÃ³w
+git diff - 	dokÅ‚adne informacje o zmianach
 git commit -m ""- zatwierdzanie zmian 
-git push origin master - wysy³anie zmian z repo lokalnego do repozytorium zdalnego do mastera
+git push origin master - wysyÅ‚anie zmian z repo lokalnego do repozytorium zdalnego do mastera
 git mv file_from file_to - zmiana nazwy pliku lub przenoszenie
-git log - wyœwietla historie zmian
-git branch - pokazuje branche lokalne które mamy dostêpne
-git clean - s³ó¿y do usuwanie nieœledzonych plików/katalogów nie mo¿e byæ owrócone ---> z flag¹ -nd (pliki i katalogi) wyœwietla co mo¿e byæ usunête
-samo polecenie bezpoœrenio nie usuwa nic, trzeba u¿ywaæ flag i zatwierdzaæ usuwanie
-git reset - cofniêcie polecenia git add lub cofniêcie zmian w projekcie z modyfikacj¹ historii 
+git log - wyÅ›wietla historie zmian
+git branch - pokazuje branche lokalne ktÃ³re mamy dostÄ™pne
+git clean - sÅ‚Ã³Å¼y do usuwanie nieÅ›ledzonych plikÃ³w/katalogÃ³w nie moÅ¼e byÄ‡ owrÃ³cone ---> z flagÄ… -nd (pliki i katalogi) wyÅ›wietla co moÅ¼e byÄ‡ usunÄ™te
+samo polecenie bezpoÅ›renio nie usuwa nic, trzeba uÅ¼ywaÄ‡ flag i zatwierdzaÄ‡ usuwanie
+git reset - cofniÄ™cie polecenia git add lub cofniÄ™cie zmian w projekcie z modyfikacjÄ… historii 
 git checkout --nazwa pliku - cofa zmiany w zmodyfikowanym pliku do poprzedniej wersji z repo
-git checkout hash zmiant z polecenia git log - pozwala na przywrócenie wersji projektu ---> po wprowadzeniu jakiœ zmian mo¿emy je zapisaæ jako nowy branch poleceniem git checkout -g nazwa-ga³êzi
+git checkout hash zmiant z polecenia git log - pozwala na przywrÃ³cenie wersji projektu ---> po wprowadzeniu jakiÅ› zmian moÅ¼emy je zapisaÄ‡ jako nowy branch poleceniem git checkout -g nazwa-gaÅ‚Ä™zi
 git checkout master - przywraca projekt do najnowszej wersji
-git revert hash zmian - odwraca zmiany z danego commita tworz¹c nowy commit który te zmiany odwraca
-git stash - odk³¹danie zmian oczekuj¹cych na zatwierdzenie, umo¿liwia np prze³¹czenie sie na inny branch iz tam dodanie tych zmian 
+git revert hash zmian - odwraca zmiany z danego commita tworzÄ…c nowy commit ktÃ³ry te zmiany odwraca
+git stash - odkÅ‚Ä…danie zmian oczekujÄ…cych na zatwierdzenie, umoÅ¼liwia np przeÅ‚Ä…czenie sie na inny branch iz tam dodanie tych zmian 
 git stash push -m "" - pozwala na przechowywanie z zmian z kometarzami 
 git stash list - pokazuje liste stosu
 git stash pop hash - przywraca zmiany ze stosu
 
-Brach - rozga³êzienie projektu umo¿liwiaj¹ce rozwój projektu bez ingerêcji w g³ówn¹ ga³¹Ÿ
+Brach - rozgaÅ‚Ä™zienie projektu umoÅ¼liwiajÄ…ce rozwÃ³j projektu bez ingerÄ™cji w gÅ‚Ã³wnÄ… gaÅ‚Ä…Åº
 
-git branch - wyœwietla liste branchy
+git branch - wyÅ›wietla liste branchy
 git branch nazwa - tworzenie nowego brancha
 git branch -D nazwa -usuwanie brancha
 git push orgin --delete nazwa brancha - usuwanie brancha na zdalnym repo
-git merge - ³¹czenie brancha z ga³êzi¹ na której siê aktualnie znajdujemy 
+git merge - Å‚Ä…czenie brancha z gaÅ‚Ä™ziÄ… na ktÃ³rej siÄ™ aktualnie znajdujemy 
 
 git fetch - pobieranie zmian ze zdalneo repozytorium
-git merge - ³¹czenie zmian ze zdalnego repo z lokalnym
+git merge - Å‚Ä…czenie zmian ze zdalnego repo z lokalnym
 
-fork - kopiowanie zdalnego repozytorium do niezale¿nej pracy 
+fork - kopiowanie zdalnego repozytorium do niezaleÅ¼nej pracy 
 
 
-Pull request - przes³anie zmian do g³ownego repozytorium z jego kopii forka. Mo¿e byæ akceptowany albo odrzucony
+Pull request - przesÅ‚anie zmian do gÅ‚ownego repozytorium z jego kopii forka. MoÅ¼e byÄ‡ akceptowany albo odrzucony
 git add remote ALIASnp upstream ADRES - dodawanie kolejnego zdalnego repo
-
+1
 
 
 
