@@ -56,3 +56,4 @@ git add remote ALIASnp upstream ADRES - dodawanie kolejnego zdalnego repo
 
 
 
+
