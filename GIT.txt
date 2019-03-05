@@ -45,7 +45,6 @@ fork - kopiowanie zdalnego repozytorium do niezależnej pracy
 
 Pull request - przesłanie zmian do głownego repozytorium z jego kopii forka. Może być akceptowany albo odrzucony
 git add remote ALIASnp upstream ADRES - dodawanie kolejnego zdalnego repo
-1
 
 
 
