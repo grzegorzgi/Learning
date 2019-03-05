@@ -1,0 +1,44 @@
+Rozproszony system kontroli wersji, który pozwala na œledzenie zmian w projekcie w trakcie jego rozwijania.
+
+Stany plików:
+
+Zmodyfikowany (modified) ------git add-----> œledzony (staged) -----git commit---->zatwierdony (commited)
+
+
+
+git init - 	inicjacja lokalnego repozytorium w akutalnym katalogu  (tworzone s¹ pkiki gita - .git)
+git add - 	dodaje pliki do repozytorium (./--all dodaje wszystko)
+git rm - 	usuwanie plików z repozytorium --> potem commit
+git clone [URL] - klonuje repozytorium zdalne 
+git status - 	sprawdzenie stanu plików
+git diff - 	dok³adne informacje o zmianach
+git commit -m ""- zatwierdzanie zmian 
+git mv file_from file_to - zmiana nazwy pliku lub przenoszenie
+git log - wyœwietla historie zmian
+git remote add <remote_name> <remote_repo_url> - mapowanie lokalnego repozytroium do repozytorium zdalnego
+git branch - pokazuje branche lokalne które mamy dostêpne
+git clean - s³ó¿y do usuwanie nieœledzonych plików/katalogów nie mo¿e byæ owrócone ---> z flag¹ -nd (pliki i katalogi) wyœwietla co mo¿e byæ usunête
+samo polecenie bezpoœrenio nie usuwa nic, trzeba u¿ywaæ flag i zatwierdzaæ usuwanie
+git reset - cofniêcie polecenia git add lub cofniêcie zmian w projekcie z modyfikacj¹ historii 
+git checkout --nazwa pliku - cofa zmiany w zmodyfikowanym pliku do poprzedniej wersji z repo
+git checkout hash zmiant z polecenia git log - pozwala na przywrócenie wersji projektu ---> po wprowadzeniu jakiœ zmian mo¿emy je zapisaæ jako nowy branch poleceniem git checkout -g nazwa-ga³êzi
+git checkout master - przywraca projekt do najnowszej wersji
+git revert hash zmian - odwraca zmiany z danego commita tworz¹c nowy commit który te zmiany odwraca
+git stash - odk³¹danie zmian oczekuj¹cych na zatwierdzenie, umo¿liwia np prze³¹czenie sie na inny branch iz tam dodanie tych zmian 
+git stash push -m "" - pozwala na przechowywanie z zmian z kometarzami 
+git stash list - pokazuje liste stosu
+git stash pop hash - przywraca zmiany ze stosu
+
+Brach - rozga³êzienie projektu umo¿liwiaj¹ce rozwój projektu bez ingerêcji w g³ówn¹ ga³¹Ÿ
+
+git brach - wyœwietla liste branchy
+git branch nazwa - tworzenie nowego brancha
+
+
+
+
+
+
+
+
+
