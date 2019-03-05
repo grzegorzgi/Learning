@@ -5,7 +5,7 @@ Stany plików:
 Zmodyfikowany (modified) ------git add-----> œledzony (staged) -----git commit---->zatwierdony (commited)
 
 
-
+git remote add origin <remote_name> <remote_repo_url> - mapowanie lokalnego repozytroium do repozytorium zdalnego
 git init - 	inicjacja lokalnego repozytorium w akutalnym katalogu  (tworzone s¹ pkiki gita - .git)
 git add - 	dodaje pliki do repozytorium (./--all dodaje wszystko)
 git rm - 	usuwanie plików z repozytorium --> potem commit
@@ -13,9 +13,9 @@ git clone [URL] - klonuje repozytorium zdalne
 git status - 	sprawdzenie stanu plików
 git diff - 	dok³adne informacje o zmianach
 git commit -m ""- zatwierdzanie zmian 
+git push origin master - wysy³anie zmian z repo lokalnego do repozytorium zdalnego do mastera
 git mv file_from file_to - zmiana nazwy pliku lub przenoszenie
 git log - wyœwietla historie zmian
-git remote add <remote_name> <remote_repo_url> - mapowanie lokalnego repozytroium do repozytorium zdalnego
 git branch - pokazuje branche lokalne które mamy dostêpne
 git clean - s³ó¿y do usuwanie nieœledzonych plików/katalogów nie mo¿e byæ owrócone ---> z flag¹ -nd (pliki i katalogi) wyœwietla co mo¿e byæ usunête
 samo polecenie bezpoœrenio nie usuwa nic, trzeba u¿ywaæ flag i zatwierdzaæ usuwanie
@@ -31,8 +31,23 @@ git stash pop hash - przywraca zmiany ze stosu
 
 Brach - rozga³êzienie projektu umo¿liwiaj¹ce rozwój projektu bez ingerêcji w g³ówn¹ ga³¹Ÿ
 
-git brach - wyœwietla liste branchy
+git branch - wyœwietla liste branchy
 git branch nazwa - tworzenie nowego brancha
+git branch -D nazwa -usuwanie brancha
+git push orgin --delete nazwa brancha - usuwanie brancha na zdalnym repo
+git merge - ³¹czenie brancha z ga³êzi¹ na której siê aktualnie znajdujemy 
+
+git fetch - pobieranie zmian ze zdalneo repozytorium
+git merge - ³¹czenie zmian ze zdalnego repo z lokalnym
+
+fork - kopiowanie zdalnego repozytorium do niezale¿nej pracy 
+
+
+Pull request - przes³anie zmian do g³ownego repozytorium z jego kopii forka. Mo¿e byæ akceptowany albo odrzucony
+git add remote ALIASnp upstream ADRES - dodawanie kolejnego zdalnego repo
+
+
+
 
 
 
