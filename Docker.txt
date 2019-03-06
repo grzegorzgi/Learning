@@ -1,0 +1,3 @@
+﻿Konteneryzacja - pozwala na uruchomienie programu/procesu w odizolowanym środowisku zawierającym wszystkie elementy wymagane do jego działania.
+
+
