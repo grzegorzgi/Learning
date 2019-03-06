@@ -1,3 +1,51 @@
-﻿Konteneryzacja - pozwala na uruchomienie programu/procesu w odizolowanym środowisku zawierającym wszystkie elementy wymagane do jego działania.
+﻿Konteneryzacja - pozwala na uruchomienie programu/procesu w odizolowanym środowisku,
+zawierającym wszystkie elementy wymagane do jego działania.
+
+Docker - pozwala na zarządzanie kontenerami i ich obrazami.
+
+Kontener - sposób opakowania oprogramowania w sposób umożliwiający samodzielne, odizolowane działanie na wspólnym systemie operacyjnym.
+Zawiera biblioteki i stawienia potrzebne do działania procesu / programu.
+- zajmują mniej miejsca
+- nie trzeba instalować dodatkowego systemu operacyjnego
+- wymagają mniejszych zasobów niż VM
+- większa przenoszalność
+
+Kontenery działają niezależnie, możliwe jest łączenie kontenerów
+Dockerfile - plik manifestu na jego podstawie konfigurowany jest obraz.
+
+
+
+Dockerfile ------build-----> Image ------run------> kontener
+
+
+ctrl + d - wyjście i zamknięcie kontenera
+ctrl + p + q - wyście ale zostawienie uruchomienog kontenera
+
+docker ps - pokaz działające kontenery, z flagą -a pokazuje wszystkie
+docker images - pokazuje informajce o obrazach
+docker pull nazwa_obrazu -  pobieranie obrazu np. docker pull centos (pobierze najnowszą wersje)
+docker rmi nazwaobrazu/ID - usuwa dany obraz
+docker rm nazwa kontenera - usuwa kontener/y
+docker attach ID/nazwa - połączenie sie z danym kontenerem
+
+docker build scieżka do dockerfile - budowanie obrazu z dockerfile  np
+docker build -t mojanazwaobrazu .(aktualna sciezka) 
+
+dockerfile to plik konfiguracyjny tworzący dany obraz
+
+FROM ubuntu
+RUN pwd
+CMD ["echo","HI world"]
+
+
+docker run -it nazwa - uruchomienie kontenerea z obrazu (-d uruchomienie w tle)
+docker start/stop - wznowienie i zatrzymanie pracy kontenera
+docker container prune - usuwa wszystkie zatrzymane kontenery
+
+docker diff nazwa kontenera - pokazuje róznice między oryginalnym obrazem a tym co zmieniliśmy
+docker commit ID/nazwa nazwa - zapisanie zmodyfikowanego obrazu jako nowy  
+ 
+
+
 
 

@@ -1,1 +1,1 @@
-Notatki Jenkins
+Jenkins - jest narzêdziem do ci¹g³ej integracji. Pozwala na automatyzacje rozwoju oprogramowania, testowania, uruchamiania oprogramowania.

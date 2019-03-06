@@ -9,6 +9,7 @@ git init - 	inicjacja lokalnego repozytorium w akutalnym katalogu  (tworzone są
 git add - 	dodaje pliki do repozytorium (./--all dodaje wszystko)
 git remote add origin <remote_name> <remote_repo_url> - mapowanie lokalnego repozytroium do repozytorium zdalnego
 git commit -m ""- zatwierdzanie zmian 
+git commit --amend -m "opis" -- Z opcją --amend nie jest tworzona nowa wersja, tylko zastępowana jest bieżąca wersja.
 git push origin master - wysyłanie zmian z repo lokalnego do repozytorium zdalnego do mastera
 
 git status - 	sprawdzenie stanu plików
@@ -22,7 +23,6 @@ git branch - pokazuje branche lokalne które mamy dostępne
 git clean - słóży do usuwanie nieśledzonych plików/katalogów nie może być owrócone ---> z flagą -nd (pliki i katalogi) wyświetla co może być usunęte
 samo polecenie bezpośrenio nie usuwa nic, trzeba używać flag i zatwierdzać usuwanie
 git reset - cofnięcie polecenia git add lub cofnięcie zmian w projekcie z modyfikacją historii 
-git checkout --nazwa pliku - cofa zmiany w zmodyfikowanym pliku do poprzedniej wersji z repo
 git checkout hash zmiant z polecenia git log - pozwala na przywrócenie wersji projektu ---> po wprowadzeniu jakiś zmian możemy je zapisać jako nowy branch poleceniem git checkout -g nazwa-gałęzi
 git revert hash zmian - odwraca zmiany z danego commita tworząc nowy commit który te zmiany odwraca
 
@@ -34,6 +34,7 @@ git stash pop hash - przywraca zmiany ze stosu
 git stash dropp - usuwanie stosu
 
 
+git fetch - pobieranie zmian ze zdalneo repozytorium bez mergowania
 
 
 Brach - rozgałęzienie projektu umożliwiające rozwój projektu bez ingeręcji w główną gałąź
@@ -42,19 +43,17 @@ git branch - wyświetla liste branchy
 git branch nazwa - tworzenie nowego brancha
 git branch -D nazwa -usuwanie brancha
 git push orgin --delete nazwa brancha - usuwanie brancha na zdalnym repo
-git merge - łączenie brancha z gałęzią na której się aktualnie znajdujemy 
 git checkout nazwa brancha - przechodzenie między branchami 
-git fetch - pobieranie zmian ze zdalneo repozytorium
-git merge - łączenie zmian ze zdalnego repo z lokalnym
+
+git merge - łączenie brancha z gałęzią na której się aktualnie znajdujemy - nie zmienia historii
+git rebase - łączy brancha z np masterem lub winnym branchem modyfikując historie tzn. commity są wciągane do danego brancha jako kolejne
 
 
 fork - kopiowanie zdalnego repozytorium do niezależnej pracy 
+git add remote ALIAS np upstream ADRES - dodawanie kolejnego zdalnego repo
 
 
-
-Pull request - przesłanie zmian do głownego repozytorium z jego kopii forka. Może być akceptowany albo odrzucony
-git add remote ALIASnp upstream ADRES - dodawanie kolejnego zdalnego repo
-
+Pull request - przesłanie zmian do głownego repozytorium z jego kopii forka lub danego projektu. Może być akceptowany albo odrzucony
 
 
 
