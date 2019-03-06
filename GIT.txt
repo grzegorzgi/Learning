@@ -1,33 +1,40 @@
-Rozproszony system kontroli wersji, który pozwala na śledzenie zmian w projekcie w trakcie jego rozwijania.
+﻿Rozproszony system kontroli wersji, który pozwala na śledzenie zmian w projekcie w trakcie jego rozwijania.
 
 Stany plików:
 
 Zmodyfikowany (modified) ------git add-----> śledzony (staged) -----git commit---->zatwierdony (commited)
 
-
-git remote add origin <remote_name> <remote_repo_url> - mapowanie lokalnego repozytroium do repozytorium zdalnego
+git clone [URL] - klonuje repozytorium zdalne 
 git init - 	inicjacja lokalnego repozytorium w akutalnym katalogu  (tworzone są pkiki gita - .git)
 git add - 	dodaje pliki do repozytorium (./--all dodaje wszystko)
-git rm - 	usuwanie plików z repozytorium --> potem commit
-git clone [URL] - klonuje repozytorium zdalne 
-git status - 	sprawdzenie stanu plików
-git diff - 	dokładne informacje o zmianach
+git remote add origin <remote_name> <remote_repo_url> - mapowanie lokalnego repozytroium do repozytorium zdalnego
 git commit -m ""- zatwierdzanie zmian 
 git push origin master - wysyłanie zmian z repo lokalnego do repozytorium zdalnego do mastera
-git mv file_from file_to - zmiana nazwy pliku lub przenoszenie
+
+git status - 	sprawdzenie stanu plików
+git diff - 	dokładne informacje o zmianach po add i zmodyfikowaniu
 git log - wyświetla historie zmian
+git config --global alias.gr "log --all --decorate --oneline --graph" --> alaias dla grafu gr
+
+git rm - 	usuwanie plików z repozytorium --> potem commit
+git mv file_from file_to - zmiana nazwy pliku lub przenoszenie
 git branch - pokazuje branche lokalne które mamy dostępne
 git clean - słóży do usuwanie nieśledzonych plików/katalogów nie może być owrócone ---> z flagą -nd (pliki i katalogi) wyświetla co może być usunęte
 samo polecenie bezpośrenio nie usuwa nic, trzeba używać flag i zatwierdzać usuwanie
 git reset - cofnięcie polecenia git add lub cofnięcie zmian w projekcie z modyfikacją historii 
 git checkout --nazwa pliku - cofa zmiany w zmodyfikowanym pliku do poprzedniej wersji z repo
 git checkout hash zmiant z polecenia git log - pozwala na przywrócenie wersji projektu ---> po wprowadzeniu jakiś zmian możemy je zapisać jako nowy branch poleceniem git checkout -g nazwa-gałęzi
-git checkout master - przywraca projekt do najnowszej wersji
 git revert hash zmian - odwraca zmiany z danego commita tworząc nowy commit który te zmiany odwraca
+
+
 git stash - odkłądanie zmian oczekujących na zatwierdzenie, umożliwia np przełączenie sie na inny branch iz tam dodanie tych zmian 
 git stash push -m "" - pozwala na przechowywanie z zmian z kometarzami 
 git stash list - pokazuje liste stosu
 git stash pop hash - przywraca zmiany ze stosu
+git stash dropp - usuwanie stosu
+
+
+
 
 Brach - rozgałęzienie projektu umożliwiające rozwój projektu bez ingeręcji w główną gałąź
 
@@ -36,11 +43,13 @@ git branch nazwa - tworzenie nowego brancha
 git branch -D nazwa -usuwanie brancha
 git push orgin --delete nazwa brancha - usuwanie brancha na zdalnym repo
 git merge - łączenie brancha z gałęzią na której się aktualnie znajdujemy 
-
+git checkout nazwa brancha - przechodzenie między branchami 
 git fetch - pobieranie zmian ze zdalneo repozytorium
 git merge - łączenie zmian ze zdalnego repo z lokalnym
 
+
 fork - kopiowanie zdalnego repozytorium do niezależnej pracy 
+
 
 
 Pull request - przesłanie zmian do głownego repozytorium z jego kopii forka. Może być akceptowany albo odrzucony
@@ -49,8 +58,24 @@ git add remote ALIASnp upstream ADRES - dodawanie kolejnego zdalnego repo
 
 
 
+git hook - skrypt wykonywany przed akcją/ jakimś zajściem w gicie
 
 
+username=$(git config user.name)
+
+if [ "$username" != "GrzegorzGiniewicz" ]
+
+then
+	
+	cat <<\EOF
+
+ERROR
+
+EOF
+	
+	exit 1
+
+fi
 
 
 
