@@ -1,1 +1,15 @@
-Jenkins - jest narzêdziem do ci¹g³ej integracji. Pozwala na automatyzacje rozwoju oprogramowania, testowania, uruchamiania oprogramowania.
+Ci¹g³a Integracja (ang. Continuous Integration) to praktyka programistyczna, w której cz³onkowie zespo³u czêsto scalaj¹ wyniki swojej
+pracy – z regu³y ka¿dy robi to przynajmniej raz dziennie. W tej sposób ka¿dego dnia powstaje kilka zintegrowanych wersji kodu, 
+które s¹ sprawdzane przez automatyczny proces budowania (i testowania).
+
+Jenkins - jest narzêdziem do ci¹g³ej integracji i dostarczania. Pozwala na automatyzacje rozwoju oprogramowania, testowania, 
+uruchamiania oprogramowania.
+
+Job - zadania które mozna uruchomiæ w jenkinsie, które mo¿na dziêki niemu kontrolowaæ i monitorowaæ.
+
+Build - rezultat joba. 
+
+
+
+Jenkins pipeline - Zestaw wtyczek które pozwalaj¹ na integracja i wdra¿anie ci¹g³ego dostarczania oprogramowania.
+Wydarzenia albo joby, które s¹ ze po³¹czone w pewnej skewencji.
