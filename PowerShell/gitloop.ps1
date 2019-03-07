@@ -1,4 +1,4 @@
-﻿For ($i=0; $i -le 5; $i++) 
+﻿For ($i=0; $i -le40; $i++) 
 {
     Write-Host "Iteracja $i"
 }
