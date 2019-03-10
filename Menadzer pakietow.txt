@@ -1,0 +1,51 @@
+Menad¿er pakietow - zestaw narzêdzi s³u¿¹cych do automatycznej instalacji, aktualizacji, konfiguracji i usuwania pakietów oprogramowania.
+Korzystanie z menad¿era pakietów ró¿ni siê od instalowania pojedynczych pakietów rêcznie tym,
+i¿ meda¿er zwykle obs³uguje zale¿noœci i potrafi œci¹gn¹æ z Internetu wymagane pakiety
+
+
+NUGET - umo¿liwia zarz¹danie pakietami, wykorzystuje framework .NET. Dzia³¹ g³ównie jako rozszerzenie do Visual studio.
+Pozwala dodawaæ/usuwaæ/pobieraæ rozszerzenia i pomaga odwo³ywaæ siê projektowi do paczek.
+
+
+
+Maven - narzêdzie s³u¿¹ce do zarz¹dzania cyklem ¿ycia i budowania projektu javowego. 
+Pozwala na automatyzacje procesu budowania aplikacji.
+
+Pozwala na zarz¹dzanie np.kompilacje ,testowanie, pakowanie rzultatu do jar,
+dokumentacje, zalerznoœciami, zarz¹dzaniem pakietów 
+
+Ca³a idea dzia³ania Mavena jest zbudowana wokó³ tzw. cyklu ¿ycia projektu.
+Ka¿dy z kroków to kolejny element na drodze od kodów Ÿród³owych do projektu uruchomionego na serwerze.
+
+pom.xml stands for Project Object Model - g³ówny plik konfiguracyjny projektu mavena. np zawiera zdeklarowane biblioteki do projektu.
+
+Maven wykorzystuje koncepcjê repozytorium, pobieraj¹c artefakty potrzebne do zbudowania aplikacji i wdra¿aj¹c wynik procesu kompilacji do repozytorium
+
+artefakt — samoistna jednostka w projekcie, artefaktem jest np. ka¿dy z modu³ów czy ka¿da z zale¿noœci projektu. 
+Mo¿na powiedzieæ, ¿e artefakt to takie zbiorcze okreœlenie które obejmuje zarówno projekty, modu³y, biblioteki, pluginy (czyli elementy ca³ego procesu), archetypy (coœ w rodzaju \‘szablonu\’ projektu, który mo¿esz szybko skonfigurowaæ i uruchomiæ) itd.
+pom.xml — g³ówny plik z ustawieniami Maven w projekcie
+repozytorium — zbiór artefaktów. Ka¿da instalacja Maven powoduje utworzenie lokalnego repozytorium,
+jest tak¿e repozytorium centralne oraz mo¿na korzystaæ z dowolnych innych repozytoriów (np. jakiegoœ projektu)
+
+
+Nodejs to œrodowisko do tworzenia skalowalnych aplikacji internetowych w JavaScript
+npm – domyœlny manager pakietów dla œrodowiska Node.js.Strona domowa aplikacji zawiera wyszukiwarkê pakietów. 
+Repozytorium jest publiczne i darmowe dla pakietów Open Source
+
+
+Nexus manages software "artifacts" required for development. If you develop software, 
+your builds can download dependencies from Nexus and can publish artifacts to Nexus creating a new way to share
+artifacts within an organization. While Central repository has always served as a 
+great convenience for developers you shouldn't be hitting it directly. 
+You should be proxying Central with Nexus and maintaining your own repositories to ensure stability within your organization. 
+With Nexus you can completely control access to, and deployment of, every artifact in your organization from a single location.
+
+Nexus zarz¹dza "artefaktami" oprogramowania wymaganymi do rozwoju. 
+Jeœli tworzysz oprogramowanie, twoje kompilacje mog¹ pobieraæ zale¿noœci od Nexusa i mog¹ publikowaæ artefakty na Nexusie.
+
+artifactory - menad¿er repozytoriów/ artefaktów
+
+
+
+
+
