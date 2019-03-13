@@ -3,10 +3,8 @@ Korzystanie z menad¿era pakietów ró¿ni siê od instalowania pojedynczych pakietów
 i¿ meda¿er zwykle obs³uguje zale¿noœci i potrafi œci¹gn¹æ z Internetu wymagane pakiety
 
 
-NUGET - umo¿liwia zarz¹danie pakietami, wykorzystuje framework .NET. Dzia³¹ g³ównie jako rozszerzenie do Visual studio.
-Pozwala dodawaæ/usuwaæ/pobieraæ rozszerzenia i pomaga odwo³ywaæ siê projektowi do paczek.
-
-
+NUGET - NuGet jest managerem pakietów dla .NET. Projekt ma na celu u³atwienie dodawania zewnêtrznych bibliotek do projektu.  
+Ma to szczególne znaczenie jeœli biblioteka, której chcemy u¿yæ, u¿ywa jeszcze innych bibliotek ze wzglêdu na zale¿noœci z którymi radzi sobie nuget.
 
 Maven - narzêdzie s³u¿¹ce do zarz¹dzania cyklem ¿ycia i budowania projektu javowego. 
 Pozwala na automatyzacje procesu budowania aplikacji.

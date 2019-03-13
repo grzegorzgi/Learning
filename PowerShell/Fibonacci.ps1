@@ -39,7 +39,7 @@ function Fib($n) {
     }
 }
 Write-Host "Fibonacci: "
-Fib -n 16
+Fib -n 5
 
 ################### iteraja
 
@@ -58,17 +58,27 @@ Fib -n 1000
 
 ################### rekurencja
 
-Function fib($n)
-{    if($n -eq 0)
+function Fib($f) 
+{
+    if($f -eq 1 -or $f -eq 0)
     {
-        return 0
+        return $f
     }
-    elseif($n -eq 1 -or $n -eq 2)
+    else
     {
-        return 1
+        return (Fib($f-1))+(Fib($f-2))
     }
-
-    return (fib($n-1)) + (fib($n-2))
-
 }
-fib -n 13
+
+Function Fib($n)
+{
+    if($n -eq 0 -or $n -eq 1)
+    {
+        return $n
+    }
+    else
+    {
+        return (fib($n-1))+(fib($n-2))
+    }   
+}
+fib -n 5

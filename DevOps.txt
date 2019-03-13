@@ -1,1 +1,22 @@
+DevOps - development (rozwój) oraz operations (operacje). Jest kultur¹ organizacyjn¹, maj¹ca za zadanie komunikacjê, 
+wspó³pracê i integracjê  pomiêdzy dzia³ami wytwarzania oprogramowania(Dev) i zarz¹dzania systemami(Ops).  Pomaga organizacji szybko wytwarzaæ oprogramowanie, produkty i us³ugi. 
+DevOps IT to model wspó³pracy pomiêdzy obszarami odpowiedzialnymi za projektowanie, przekazanie i eksploatacjê us³ug.
+DevOps zajmuje siê budow¹, monitoringiem i ulepszaniem pipelinów continous integration, deployment, delivery.
+
+Jest to rozwi¹zanie, idealnie sprawdzaj¹ce siê w przypadku organizacji, 
+które wytwarzaj¹ b¹dŸ wdra¿aj¹ wiele zmian w œrodowiskach produkcyjnych, i chcia³yby to robiæ w jak najkrótszym czasie 
+i z zachowaniem wysokiej jakoœci.
+
+DevOps zak³ada przede wszystkim:
+
+ -   budowanie produktu z zachowaniem perspektywy ca³oœci obrazu (big picture perspective)
+ -   g³êboki monitoring od samego pocz¹tku tworzenia produktu
+ -   podejmowanie decyzji bazuj¹cych na wiarygodnych danych
+ -   krótszy cykl wytwarzania oprogramowania.
+
+Istotnym elementem jest te¿ automatyzacja procesów, czyli zbudowanie œrodowiska pracy realizuj¹cego funkcje,
+ które dotychczas wymaga³y czasoch³onnej, rêcznej pracy (np. automatyzacja wdro¿eñ).
+
+
+Pojêcie DevOps czêsto kojarzy siê z continous integration, deployment, delivery.
 

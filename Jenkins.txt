@@ -19,7 +19,7 @@ Build - rezultat joba.
 
 
 Jenkins pipeline - Zestaw wtyczek które pozwalaj¹ na integracja i wdra¿anie ci¹g³ego dostarczania oprogramowania.
-Wydarzenia albo joby, które s¹ ze po³¹czone w pewnej skewencji.
+Wydarzenia albo joby, które s¹ uruchamiane w poszczególnych etapach procesu ci¹g³ego dostarczania oprogramowania.
 Ca³y proces jest definiowany jako kod w jenkinsfile podzielony na etapy -stages, któy mo¿e byæ przechowywany w systemie kontroli wersji np. git
 Zamiast budowaæ joby dla ka¿dej z fazy mo¿na zdefiniowaæ wszystko w jenkinsfile.
 Zalety:

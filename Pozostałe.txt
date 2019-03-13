@@ -6,7 +6,7 @@ Amazon Web Services (AWS) jest bezpieczn¹ platform¹ us³ug w chmurze oferuj¹c¹ mo
 hosting baz danych, us³ugi dostarczania treœci (content delivery) i wiele innych produktów i us³ug pomagaj¹cych w ³atwym skalowaniu i wzroœcie biznesu.
 
 Zalety:
--Self-Service - sami mo¿emy wybraæ zasoby/ us³ugi które nas interesuj¹ i sszybko zacz¹æ ich u¿ywaæ
+- Self-Service - sami mo¿emy wybraæ zasoby/ us³ugi które nas interesuj¹ i szybko zacz¹æ ich u¿ywaæ
 - Du¿a skalowalnoœæ
 - Rozliczanie za wyko¿ystane zasoby
 
@@ -26,10 +26,15 @@ Logging aplikacji - logi to nie od³¹czny element aplikacji dziêki którym mo¿na p
 Informacji o b³êdach, dzia³aniu aplikacji, wydarzeniach w aplikacji. Odpowiednie praktyki tworzenia, zbierania i analizowania logów pozwalaj¹ zachowaæ przej¿ystoœæ i dostarczyæ cennych informacji.
 
 
-heal checki aplikacji - monitorowanie stanu aplikacji. Zapewnienie jej prawid³owego dzia³ania.
+heal checki aplikacji - monitorowanie stanu aplikacji. Zapewnienie jej prawid³owego dzia³ania. W przypadku awari przejêcie zadania przez inny np serwer.
 
-Proxy - 
+Proxy - proxy jest serwerem który dzia³a jak most pomiêdzy u¿ytkownikiem a internetem. Ca³y ruch sieciowy kierowany jest poprzez serwer proxy i identyfikowany jest jako pochodz¹cy z adresu IP proxy - nie naszego
 
-reverse proxy -
+reverse proxy - odwrotna sytuacja do proxy klient ³¹czy siê z serwerem reversed proxy i dalej ³¹czony jest z którymœ z podpiêtych serwerów. 
+Zalety np. kontrola dostêpu , dodatkowa ochrona, load balancing itp
 
-load balancing - 
+load balancing - równowa¿enie obci¹¿enia, technika pozwalaj¹ca na optymalizacji wykorzystania zasobów. Np. nginx mo¿e dzia³aæ jako load balancer HTTP do dystrybucji ruchu na kilka serwerów oraz do poprawy
+ wydajnoœci, skalowalnoœci i niezawodnoœci aplikacji.
+
+
+ JIRA jest narzêdziem, które s³u¿y do zarz¹dzania projektami oraz zarz¹dzania b³êdami.

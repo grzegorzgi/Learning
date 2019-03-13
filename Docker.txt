@@ -43,7 +43,9 @@ docker start/stop - wznowienie i zatrzymanie pracy kontenera
 docker container prune - usuwa wszystkie zatrzymane kontenery
 
 docker diff nazwa kontenera - pokazuje róznice między oryginalnym obrazem a tym co zmieniliśmy
-docker commit ID/nazwa nazwa - zapisanie zmodyfikowanego obrazu jako nowy  
+docker commit ID nazwa nazwa - zapisanie zmodyfikowanego obrazu jako nowy  
+
+docker exec -it ID /bin/bash - wykonanie polecenia w uruchomionym dnaym kontenerze 
  
 
 
