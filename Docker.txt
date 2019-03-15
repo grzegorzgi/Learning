@@ -33,10 +33,31 @@ docker build -t mojanazwaobrazu .(aktualna sciezka)
 
 dockerfile to plik konfiguracyjny tworzący dany obraz
 
-FROM ubuntu
-RUN pwd
-CMD ["echo","HI world"]
 
+########################################################################
+# Use an official Python runtime as a parent image
+FROM python:2.7-slim
+
+# Set the working directory to /app
+WORKDIR /app
+
+# Copy the current directory contents into the container at /app
+COPY . /app
+
+# Install any needed packages specified in requirements.txt
+RUN pip install --trusted-host pypi.python.org -r requirements.txt
+
+# Make port 80 available to the world outside this container
+EXPOSE 80
+
+# Define environment variable
+ENV NAME World
+
+# Run app.py when the container launches
+CMD ["python", "app.py"]
+
+
+#########################################################################
 
 docker run -it nazwa - uruchomienie kontenerea z obrazu (-d uruchomienie w tle)
 docker start/stop - wznowienie i zatrzymanie pracy kontenera
@@ -46,6 +67,8 @@ docker diff nazwa kontenera - pokazuje róznice między oryginalnym obrazem a ty
 docker commit ID nazwa nazwa - zapisanie zmodyfikowanego obrazu jako nowy  
 
 docker exec -it ID /bin/bash - wykonanie polecenia w uruchomionym dnaym kontenerze 
+
+docker cp foo.txt 72ca2488b353:/foo.txt - kopiowanie pliku z hosta na kontener
  
 
 

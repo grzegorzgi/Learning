@@ -42,3 +42,15 @@ Select-String -Path C:\Users\Grzegorz\Desktop\kot.txt -Pattern 'ALA'
 
 Get-Command | Out-File -FilePath C:\Users\Grzegorz\Desktop\get.txt
 Select-String -Path C:\Users\Grzegorz\Desktop\get.txt -Pattern 'gEt'
+
+Select-String -Path C:\Users\Grzegorz\Desktop\Learning\GIT.txt -Pattern 'init'
+
+(Get-Content C:\Users\Grzegorz\Desktop\Learning\GIT.txt)
+
+Get-Alias | Out-File -FilePath C:\Users\Grzegorz\Desktop\alias.txt
+Select-String -Path C:\Users\Grzegorz\Desktop\alias.txt -Pattern 'gci'
+
+Get-ChildItem env: | sort name
+
+$c = @($env:COMPUTERNAME)
+Write-Output "$c"

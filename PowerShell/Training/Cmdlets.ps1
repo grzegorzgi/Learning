@@ -6,7 +6,7 @@
 # Move-Item ... 
 # Rename-Item ...
 # Get-Content ... wyświetla zawartość 
-#(Get-Content 'C:\Users\Grzegorz\Desktop\PW\1.txt').Length - wyświtla ilość znakó/długość
+# (Get-Content 'C:\Users\Grzegorz\Desktop\PW\1.txt').Length - wyświtla ilość znakó/długość
 # Test-Path -sprawdzanie czy scieżka istnieje --> T/F
 
 

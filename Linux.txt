@@ -1,0 +1,56 @@
+ls -la - listuje pliki w danej œcie¿ce, te niewidoczne te¿ 
+ls - R - pokazuje drzewo folderów
+
+alias 'polecenie'='inne_polecenie_lub_kilka_polecen'
+
+cp -kopiowanie plików
+cp -r cir1 dir3 - jeœli nie ma danego folderu polecenie cp stworzy je
+cp ../1.txt ../2.txt . - skopiuje pliki z poprzednij scie¿ki do aktualnej, mo¿na podawaæ kilka zróde³
+ostatnie jest miejsce przeznaczenia.
+
+less - pozwala na przegl¹danie pliku, mo¿na nawigowaæ 
+dir.txt less 
+po naciœniecu / mo¿na wpisaæ feaz której siê szuka, q- wychodzenie z dokumentu
+ 
+top - program pokazuje procesy/ zu¿ycie procesora i pamiêci. 
+Mo¿na w nim zabiæ program k, mozna zmieniæ odœwie¿anie s
+
+which - zwraca scie¿kê danego elementu. Jeœli to polecenie to poka¿e gdzie jest.
+whatis - zwraca krotka informacje o poleceniu z manuala.
+
+chown {-R} [user]{:group} [file|directory] zmiana w³aœciciela pliku/ albo folderu ze wszystkim w œrodku
+chgrp {-R} [group] [file|directory] -zmiana grupy pliku/ albo folderu ze wszystkim w œrodku
+
+useradd nazwa u¿ytkownika -m(stworzy home directory) -s /bin/bash -g users (grupa) -stworzenie u¿ytkownika 
+passwd -zmiana has³a dla roota, jeœli doda siê nazwe u¿ytkownika wtedy zmiana dla u¿ytkownika
+
+userdel - usuwa u¿ytkownika/has³o ale nie jego home directory z flag¹ -r usunie wszystko
+
+groups -wyœwietla grupy w systemie do których u¿ytkownik jest do³¹czony
+cat /etc/gruop - wyœiwtla wszystkie grupy w systemie i przynale¿nych u¿ytkowników
+
+groupadd nazwa_grupy -dodawanie grupy
+groupdel nazwa_grupy - usuwanie grupy
+
+gpasswd -a (dodaæ) -d(usun¹æ) nazwa_u¿ytkownika nazwa_grupy -dodawanie u¿ytkownika do grupy
+
+Wyœwietlanie pamiêci RAM:
+
+cat /proc/meminfo
+free 
+vmstat -s
+
+df -h - pokazuje zajête miejsce na dysku w MB
+du -h - pokazuje miejsce zajmowane przez pliki w danej lokacji flaga -s pokazuje tylko podsumowanie
+
+watch - uruchamia polecenie w trybie czasowym odswie¿aj¹c je o dany czas
+watch ls -la
+watch ps -aux
+
+head - domyœlnie pokazuje pierwszych 10 linii -n zmiana iloœci linii , -f nie wychodzi z pliku i pokazuje zmiany
+tail - domyœlnie pokazuje ostatnich 10 linii - mo¿na u¿ywaæ z kilkoma plikami
+head nazwa_pliku
+
+
+
+.bashrc - plik konfiguracyjny basha u¿ytkownika, pozwala wprowadziæ sta³e zmiany przy otwieraniu nowego terminala
