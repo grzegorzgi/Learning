@@ -19,7 +19,7 @@ git push origin master - wysyłanie zmian z repo lokalnego do repozytorium zdaln
 
 git status - 	sprawdzenie stanu plików
 git diff - 	dokładne informacje o zmianach po add i zmodyfikowaniu
-git diff-tree hash - pokazuje co zostało zmienione w danym commicie
+git diff-tree hash - pokazuje co zostało zmienione (pliki) w danym commicie
 git log - wyświetla historie zmian
 git config --global alias.gr "log --all --decorate --oneline --graph" --> alaias dla grafu gr
 
@@ -49,7 +49,7 @@ git branch - wyświetla liste branchy
 git branch nazwa - tworzenie nowego brancha
 git branch -D nazwa -usuwanie brancha
 git push orgin --delete nazwa brancha - usuwanie brancha na zdalnym repo
-git checkout nazwa brancha - przechodzenie między branchami 
+git checkout nazwa brancha - przechodzenie między branchami
 
 git merge - łączenie brancha z gałęzią na której się aktualnie znajdujemy - nie zmienia historii
 git rebase - łączy brancha z np masterem lub winnym branchem modyfikując historie tzn. commity są wciągane do danego brancha jako kolejne
