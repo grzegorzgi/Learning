@@ -4,6 +4,11 @@ Stany plików:
 
 Zmodyfikowany (modified) ------git add-----> śledzony (staged) -----git commit---->zatwierdony (commited)
 
+git config --global user.email "mail"
+
+git config --global user.name "grzegorz"
+
+
 git clone [URL] - klonuje repozytorium zdalne 
 git init - 	inicjacja lokalnego repozytorium w akutalnym katalogu  (tworzone są pkiki gita - .git)
 git add - 	dodaje pliki do repozytorium (./--all dodaje wszystko)

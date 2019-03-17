@@ -51,6 +51,82 @@ head - domyœlnie pokazuje pierwszych 10 linii -n zmiana iloœci linii , -f nie wy
 tail - domyœlnie pokazuje ostatnich 10 linii - mo¿na u¿ywaæ z kilkoma plikami
 head nazwa_pliku
 
+find ./Desktop -name 'test.*'  - szukanie plików
+find ./Desktop -mtime -2 - szuka plików które zosta³y stworzone 2 dni temu
+
+wc nazw pliku - liczenie znaków w pliku wiersze/s³owa/znaki -l/-w/c  -L pokazuje najd³u¿szy wiersz
+
+cal - pokazuje kalendarz 
+cal 2 2019
+cal | awk 'NR == 6 {print $3}'  - pokazuje dzieñ z aklendarza z wybranego wiersza z wybranej kolumny
+
+
+date - wyœwietla date i czas / mo¿na odpowiednio formatowaæ 
+-s "data czas" - zmienia czas i date
+date +%d/%m/%y -wyœwietla date d/m/r
+date "+DATE %m/%d/%y%nTIME: %H/%M/%S" - wyœwietli DATE:   i TIME: w osobnych liniach dziêki %n
+
+; - rozdziela komendy. Jeœli jakaœ komenda nie istnieje zoistanie wyœwietlony b³¹d ale kompenda pójdzie dalej
+ls -la ; pwd
+
+&& - ³¹czy komendy ale nie przejdzie dalej jeœli jakaœ zawiedzie
+
+&& AND
+
+if [ $condition1 ] && [ $condition2 ]
+#  Same as:  if [ $condition1 -a $condition2 ]
+#  Returns true if both condition1 and condition2 hold true...
+
+if [[ $condition1 && $condition2 ]]    # Also works.
+#  Note that && operator not permitted inside brackets
+#+ of [ ... ] construct.
+
+|| OR
+
+if [ $condition1 ] || [ $condition2 ]
+# Same as:  if [ $condition1 -o $condition2 ]
+# Returns true if either condition1 or condition2 holds true...
+
+if [[ $condition1 || $condition2 ]]    # Also works.
+#  Note that || operator not permitted inside brackets
+#+ of a [ ... ] construct.
+
+ 
+apt-get – program bêd¹cy sk³adnikiem narzêdzia Advanced Packaging Tool (APT-a). Jego g³ównym zadaniem jest pobieranie, instalowanie i usuwanie pakietów. 
+install - instaluje podane pakiety;
+remove - usuwa podane pakiety;
+purge - ca³kowicie usuwa podane pakiety, razem z ich ustawieniami;
+update - aktualizuje listê pakietów;
+upgrade - aktualizuje pakiety;
+
+
+tar - pakowanie/rozpakowywanie w formacie tar
+tar -cvf (c- tworzenie archiwum, v - verbouse poka¿ postêp, f - podawanie nazwy ) nazwa_paczki plik/folder do pakowania
+tar -xvf rozpakowywanie
+tar -czvf - pakowanie do tar.gz
+tar -tf wyœwietlanie zawartoœci archiwum
+tar -xvf paczka -c (do danej œcie¿ki która istnieje) scie¿ka
+
+mkdir Bash ; chmod 777 | tar xvf bash.tar -c Bash
+
+grep " fraza" plik1 plik2.. przeszukiwanie fraz
+-i ignoruje wielkoœæ znaków
+-n numeruje wiersze
+-v wszystki linie które nie maj¹ danej frazy
+
+ifconfig - informacje sieciowe
+sudo ifconfig eth0 down/up - wy³¹czanie w³¹czanie sieci
+
+
+netstat -rozbudowane narzêdzie sieciowe (np po³¹czenia sieciowe/ porty/ tabele routingu) -najlepiej u¿ywaæ z | less
+-a wszystkie po³¹czenia
+-t tylko tcp
+-u tylko udp
+-l listening
+-s statystyki (wysy³ane pakiety itp)
+-p podaje pid procesu
+-n podaje porty
+-ie daje tto samo co ifconfig
 
 
 .bashrc - plik konfiguracyjny basha u¿ytkownika, pozwala wprowadziæ sta³e zmiany przy otwieraniu nowego terminala

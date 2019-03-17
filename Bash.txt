@@ -1,2 +1,2 @@
-To s¹ notatki Basha aaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-bash
+,, - zmienia wszytkie litery na ma³e w stringu w zmiennej (, zmienia pierwsz¹ litere)
+^^ - du¿e litery
