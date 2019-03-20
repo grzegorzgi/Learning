@@ -33,6 +33,9 @@ docker build -t mojanazwaobrazu .(aktualna sciezka)
 
 dockerfile to plik konfiguracyjny tworzący dany obraz
 
+docker tag ID TAG - taguje obraz
+
+docker push repozytorium/nazwa:tag - pushowanie obrazu do repozytorium / resjestru
 
 ########################################################################
 # Use an official Python runtime as a parent image
@@ -71,6 +74,28 @@ docker exec -it ID /bin/bash - wykonanie polecenia w uruchomionym dnaym kontener
 docker cp foo.txt 72ca2488b353:/foo.txt - kopiowanie pliku z hosta na kontener
  
 
+COPY vs ADD - add oprócz kopiowania pozwala na dodawanie zródła zdalnego albo wypakowanie pliku do obrazu.
+
+RUN vs CMD - RUN wykonuje polecenia podczas podczas budowania obrazu. CMD wykonywane jest po starcie kontenera.
 
 
+docker build --no-cache - buduje obraz zawsze od zera
+docker run --rm - usuwa kontener po jego zamknieciu
+docker run --rm -it progrium/stress - obraz odpowiedzialny za obciążenie 
+docker update - update parametrów kontenera (np limit CPU/ pamięci)
+/var/lib/docker/containers - pliki konfiguracyjne 
+docker run --memory-swap = przestrzeń wymiany pamięci
+
+docker save/import obraz > nazwa.tar - zapisuje obraz jakot tar
+
+
+docker logs ID kontenera - logi kontenera -t(tail) --max-size(ograniczenie wielkości)
+docker stats - podgląd pracy kontenerów / zużycie zasobów 
+docker history - pokazuje historie obrazu
+doker deamon --userns-remap - związane z namespace zwiększa bezpieczeństwo.
+
+
+mellon:
+grzegorzgi
+84..gg
 

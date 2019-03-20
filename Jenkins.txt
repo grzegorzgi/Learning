@@ -37,3 +37,14 @@ Zamiast definiowaæ pipeline mo¿na u¿yæ innych wtyczek które buduj¹ pipeline z is
 A Pipeline is a user-defined model of a CD pipeline. 
 A Pipeline’s code defines your entire build process, 
 which typically includes stages for building an application, testing it and then delivering it.
+
+
+
+Jak mo¿na odpalaæ joba:
+- manualnie lub zdalnie
+- budowanie po innym jobie
+- co jakiœ okres czasu
+- sprawdzaæ czy nie zosta³ zrobiony commit
+- git hook triger
+
+Do jenkinsa mo¿emy przekazywaæ zmienne np string, boolean zmienne œrodowiskowe jenkinsa

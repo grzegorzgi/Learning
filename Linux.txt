@@ -1,3 +1,144 @@
+/bin -binarne (wykonywalne) pliki najbardziej podstawowych narzêdzi np. cat
+/boot - pliki niezbêdne do uruchomienia systemu
+/etc - pliki konfiguracyjne, ustawienia systemowe 
+/dev - pliki urz¹dzeñ ( lecz odnosz¹ siê do urz¹dzeñ - za ich poœrednictwem system komunikuje siê z urz¹dzeniami )
+/opt - do instalacji dodatkowego oprogramowania np. java
+/proc - wirtualny katalog, zawieraj¹cy dane o aktualnie uruchomionych procesach
+/sbin -  pliki wykonywalne poleceñ, które mog¹ byæ wykonywane tylko przez administratora
+/sys - interfejs zmiany parametrów j¹dra
+/var - Ten katalog zawiera dane, które s¹ zmieniane podczas normalnej pracy systemu operacyjnego, np logi.
+/usr - Katalog, w którym przechowywane s¹ programy, biblioteki itp. na u¿ytek wszystkich u¿ytkowników.
+/media - Katalog, w którym montowane s¹ partycje, cd-romy, dyskietki, itp.
+/lib - W tym katalogu znajduj¹ siê biblioteki programów wykorzystywanych przez system i u¿ytkowników
+/home - W tym katalogu znajduj¹ siê katalogi domowe u¿ytkowników
+/tmp - Katalog tymczasowy (temporary) na u¿ytek systemu
+/root katalog domowy admisnistratora
+
+bashrc - plik w którym personalizujemy œrodowisko dla u¿ytkownika 
+
+SSH (ang. secure shell) to standard protoko³ów komunikacyjnych u¿ywanych w sieciach komputerowych TCP/IP
+ssh nazwa_uzytkownika@adres_hosta 
+
+########################## Link twardy i symboliczny
+
+Dowi¹zanie twarde - to utworzenie nowej nazwy dla istniej¹cego pliku. Wskazuje na te same dane. 
+Systemy plików ext zawieraj¹ informacje o plikach w i-wêz³ach
+Istniej¹ tylko w obrêbie jednego systemu plików - partycji . 
+Plik usuniêty zostanie w momencie usuniêcia wszystkich takich linków.
+(nie mozna robiæ dla katalogów)
+
+Dowi¹zania sta³e charakteryzuj¹ siê tym, ¿e posiadaj¹ ten sam i-wêze³ co wskazywany plik. 
+W praktyce oznacza to, ¿e dowi¹zanie takie zawiera pe³n¹ informacjê o pliku i w razie skasowania
+oryginalnego pliku dowi¹zanie nadal bêdzie zawieraæ informacje o tym pliku (jego zawartoœæ).
+
+ln cel nawza_dowi¹zania
+ls -l - pokazuje liczbe dowi¹zañ
+
+Dowi¹zanie symboliczne - Link symboliczny to dowi¹zanie do pliku wskazuj¹ce na jego nazwê.
+
+ln -s cel nazwa_dowi¹zania
+
+Linki usuwamy poleceniem rm
+
+
+###################################
+
+/proc/version - wersia
+/etc/issue - dystrybucja
+/proc/cpuinfo -informacje o cpu
+df -h informacje o dysku
+free - pamiêæ
+id nazwa_u¿ytkownika - info o u¿ytkowniku UID GID
+last - informacje o logowaniach
+who -pokazuje zalogowanego u¿ytkownika
+env - pokazuje zmienne œrodowiskowe
+uname -a info o systemi i j¹drze
+/var/log/dmesg - logi ze startu systemu - j¹dra
+/var/log//messeges - logi systemu i serwisuów
+history - polecenie do przegl¹dania histori terminala
+
+
+##############################################
+
+SIGSTOP - ctrl-z Sygna³ ten zatrzymuje proces. Podobnie jak sygna³u SIGKILL, nie mo¿na go zignorowac, ani przechwyciæ
+SIGINIT - ctrl-c Domyœlnie powoduje zakoñczenie procesu . Powoduje zatrzymanie procesu w termianlu
+SIGTERM - Zakoñczenie procesu - ³agodniejsze pozwala procesowi sie zamkn¹æ, zapisaæ.
+SIGKILL - kill -9 - Zamkniêcie procesu - wymuszone, natychmiastowe
+SIGUSR_1 - Sygna³ zdefiniowany przez uzytkownika
+
+
+
+######################################
+
+STDIN (0) < << standardowe wjeœcie
+
+
+STDOUT (1) > >> standardowe wyjœcie
+
+
+STDERR (2) 2> 2>> standardoy strumieñ b³êdów
+np z³e polecenie lsf 2> error.txt - zwartoœæ b³êdu bêdzie w pliku
+
+&> - przekierowanie do pliku STDOUT i STDERR
+
+2>&1 przkeirowanie ERR na OUT
+
+i>&j przkierowanie i na j (1,2,3)
+
+######################################
+
+xargs - xargs czyta ze standardowego wejœcia a nastêpnie wykonuje wskazany program,
+przekazuj¹c do niego wczytane parametry. 
+Warto wiedzieæ o dwóch domyœlnych cechach tej komendy. 
+Jeœli nie wska¿emy jaki program ma zostaæ wykonany, to bêdzie to echo
+
+xargs < test.sh - wyœwietli plik w terminalu jak echo
+
+find -name "*.log" | grep "install" - znajdzie pliki o rozsze¿eniu log i podœwietli te z install w nazwie
+
+find -name "*.log" | xargs grep "install" - znajdzie pliki z rozszerzeniem log i dla piwerszego znalezionego wyœle polecenie grep "instal" - bêdzie szuka³ w œrodku pliku.
+
+Find œcie¿ka argumenty - w¿ana jest kolejnoœæ
+
+######################################
+
+printenv - wyœwietla zmienne œrodowiskowe
+
+PATH - zmienna, która mówi w jakich folderach s¹ pliki wykonywalne dla danych komend
+Dziêki temu nie musimy wpisywaæ pe³nej œcie¿ki np do pythona tylko mo¿emy napisaæ python i scie¿ka skryptu.
+
+OLDPWD - zmienna przechowuj¹ca œcie¿kê do poprzedniego katalogu
+
+PWD - zmienna przechowuj¹ca œcie¿kê do bie¿¹cego katalogu
+
+HOME - zmienna przechowuj¹ca œcie¿kê do katalogu domowego
+
+$# - liczba parametrów przekazanych do programu
+#? - kod zakoñczenia polecenia lub programu wywo³anego z programu pow³oki
+$0 - pod zmienna t¹ kryje siê nazwa uruchomionego programu
+$1,$2 - kolejne parametry programu
+
+OSTYPE=Linux - typ systemu 
+EDITOR=vim - nazwa domyœlnego edytora tekstu
+LOGNAME- nasz login 
+
+set - wyœwietla ustawienia zmiennych lokalnych 
+
+$UID - uid u¿ytkownika
+
+dodawanie zmiennych œrodowiskowych:
+
+export SCRIPT_PATH=/usr/bin/skrypt.sh
+zmiana:
+export EDITOR=mcedit\
+dodawanie:
+PATH=$PATH:moj_katalog
+
+
+###############################################
+
+
+
 ls -la - listuje pliki w danej œcie¿ce, te niewidoczne te¿ 
 ls - R - pokazuje drzewo folderów
 
@@ -25,6 +166,11 @@ useradd nazwa u¿ytkownika -m(stworzy home directory) -s /bin/bash -g users (grup
 passwd -zmiana has³a dla roota, jeœli doda siê nazwe u¿ytkownika wtedy zmiana dla u¿ytkownika
 
 userdel - usuwa u¿ytkownika/has³o ale nie jego home directory z flag¹ -r usunie wszystko
+
+alias 'nasza_definicja'='polecenie'
+np.:
+alias 'p'='ps -aux'
+unalias p
 
 groups -wyœwietla grupy w systemie do których u¿ytkownik jest do³¹czony
 cat /etc/gruop - wyœiwtla wszystkie grupy w systemie i przynale¿nych u¿ytkowników
@@ -92,6 +238,9 @@ if [[ $condition1 || $condition2 ]]    # Also works.
 #+ of a [ ... ] construct.
 
  
+tee – uniksowe polecenie, wypisuj¹ce dane wejœciowe na standardowe wyjœcie i do dowolnej liczby plików.
+
+
 apt-get – program bêd¹cy sk³adnikiem narzêdzia Advanced Packaging Tool (APT-a). Jego g³ównym zadaniem jest pobieranie, instalowanie i usuwanie pakietów. 
 install - instaluje podane pakiety;
 remove - usuwa podane pakiety;
