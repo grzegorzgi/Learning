@@ -43,7 +43,7 @@ Linki usuwamy poleceniem rm
 
 ###################################
 
-/proc/version - wersia
+/proc/version - wersja
 /etc/issue - dystrybucja
 /proc/cpuinfo -informacje o cpu
 df -h informacje o dysku
@@ -54,19 +54,21 @@ who -pokazuje zalogowanego u¿ytkownika
 env - pokazuje zmienne œrodowiskowe
 uname -a info o systemi i j¹drze
 /var/log/dmesg - logi ze startu systemu - j¹dra
-/var/log//messeges - logi systemu i serwisuów
+/var/log//messeges - logi systemu i serwisów
 history - polecenie do przegl¹dania histori terminala
 
 
 ##############################################
 
 SIGSTOP - ctrl-z Sygna³ ten zatrzymuje proces. Podobnie jak sygna³u SIGKILL, nie mo¿na go zignorowac, ani przechwyciæ
-SIGINIT - ctrl-c Domyœlnie powoduje zakoñczenie procesu . Powoduje zatrzymanie procesu w termianlu
-SIGTERM - Zakoñczenie procesu - ³agodniejsze pozwala procesowi sie zamkn¹æ, zapisaæ.
+SIGINT - ctrl-c Domyœlnie powoduje zakoñczenie procesu . Powoduje zatrzymanie procesu w termianlu
+SIGTERM -  kill Programowe zakonczenie procesu - ³agodniejsze pozwala procesowi sie zamkn¹æ, zapisaæ.
 SIGKILL - kill -9 - Zamkniêcie procesu - wymuszone, natychmiastowe
 SIGUSR_1 - Sygna³ zdefiniowany przez uzytkownika
 
+bg numer zadania - wznawia proces w tle
 
+fg numer zadania - wznawia proces w konsoli
 
 ######################################
 
@@ -104,7 +106,7 @@ Find œcie¿ka argumenty - w¿ana jest kolejnoœæ
 
 printenv - wyœwietla zmienne œrodowiskowe
 
-PATH - zmienna, która mówi w jakich folderach s¹ pliki wykonywalne dla danych komend
+PATH - zmienna, która mówi w jakich folderach pow³oka ma szukaæ plików wykonywalnych dla komendy
 Dziêki temu nie musimy wpisywaæ pe³nej œcie¿ki np do pythona tylko mo¿emy napisaæ python i scie¿ka skryptu.
 
 OLDPWD - zmienna przechowuj¹ca œcie¿kê do poprzedniego katalogu
@@ -132,7 +134,7 @@ export SCRIPT_PATH=/usr/bin/skrypt.sh
 zmiana:
 export EDITOR=mcedit\
 dodawanie:
-PATH=$PATH:moj_katalog
+export PATH=$PATH:moj_katalog
 
 
 ###############################################
@@ -142,6 +144,12 @@ PATH=$PATH:moj_katalog
 ls -la - listuje pliki w danej œcie¿ce, te niewidoczne te¿ 
 ls - R - pokazuje drzewo folderów
 
+ps -aux - wyœwietl procesy
+
+a = show processes for all users
+u = display the process's user/owner
+x = also show processes not attached to a terminal
+
 alias 'polecenie'='inne_polecenie_lub_kilka_polecen'
 
 cp -kopiowanie plików
@@ -150,7 +158,6 @@ cp ../1.txt ../2.txt . - skopiuje pliki z poprzednij scie¿ki do aktualnej, mo¿na
 ostatnie jest miejsce przeznaczenia.
 
 less - pozwala na przegl¹danie pliku, mo¿na nawigowaæ 
-dir.txt less 
 po naciœniecu / mo¿na wpisaæ feaz której siê szuka, q- wychodzenie z dokumentu
  
 top - program pokazuje procesy/ zu¿ycie procesora i pamiêci. 
@@ -173,7 +180,7 @@ alias 'p'='ps -aux'
 unalias p
 
 groups -wyœwietla grupy w systemie do których u¿ytkownik jest do³¹czony
-cat /etc/gruop - wyœiwtla wszystkie grupy w systemie i przynale¿nych u¿ytkowników
+cat /etc/group - wyœiwtla wszystkie grupy w systemie i przynale¿nych u¿ytkowników
 
 groupadd nazwa_grupy -dodawanie grupy
 groupdel nazwa_grupy - usuwanie grupy
@@ -279,3 +286,98 @@ netstat -rozbudowane narzêdzie sieciowe (np po³¹czenia sieciowe/ porty/ tabele r
 
 
 .bashrc - plik konfiguracyjny basha u¿ytkownika, pozwala wprowadziæ sta³e zmiany przy otwieraniu nowego terminala
+
+
+
+
+
+chown - zmiana uprawnieñ
+
+find / -perm -4000
+
+sitcki bit - przy ustawionym stickibicie tylko w³aœciciel mo¿e go susn¹æ.
+Dla pliku ustawienie sticky bitu oznacza, ¿e program, 
+który on przechowuje bêdzie po jego zakoñczeniu nadal przechowywany w pamiêci komputera.
+
+chmod 1*** nazwa_pliku_katalogu
+chmod +t nazwa_pliku_katalogu    
+
+
+Bity SUID i GUID 
+
+uruchamianie programu (nie skryptu) z prawami w³aœciciela lub grupy przypisanej temu programowi, 
+a nie z prawami u¿ytkownika, który ten program uruchamia. 
+
+suid :
+
+chmod u+s nazwa_plku
+chmod 4*** nazwa_pliku
+
+sgid :
+
+chmod g+s nazwa_pliku
+chmod 2*** nazwa_pliku
+
+suid i sgid :
+
+chmod 6*** nazwa_pliku
+
+
+
+
+
+FIND#######################
+
+find /home/grzegorz/ -name "*bash*" - znajdzie pliki które maj¹ w nazwie bash, wielkoœæ liter nie ma znaczenia
+find /home/grzegorz/ -iname "*bash*" - znajdzie pliki które maj¹ w nazwie bash, wielkoœæ liter ma znaczenia
+find /mnt/Muzyka ! -name '*Madonna*' – przeszuka katalog i wyœwietli nazwy plików, które nie maj¹ w sobie nazwy „Madonna” (wielkoœæ liter ma znaczenie);
+find /katalog/ -user osoba -type d – poszukiwanie podkatalogów w katalogu /katalog nale¿¹cych do u¿ytkownika osoba
+find / -type f | wc -l - liczba plików na dysku
+find ~ -type f -size +20M -name *.avi - polecenie wyszuka w naszym katalogu domowym plików z rozszerzeniem avi wiêkszych ni¿ 20 megabajtów.
+find ./ -type d -user test -name * - polecenie wyszukuje wszystkich folderów w bie¿¹cym katalogu, których w³aœcicielem jest uzytkownik o nazwie „test”.
+find / -mtime 1 - ¯eby znaleŸæ pliki z czasem modyfikacji 1 dzieñ temu
+find / -perm 644 - znajdŸ plik o takoch uprawnieniach
+find -atime -7 znajdŸ pliki otwierane w ci¹gu mniej ni¿ 7 ostatnich dni
+find - group szkola znajdŸ w bie¿¹cym katalogu wszystko co jest przypisane do grupy szko³a
+
+GREP######################
+
+
+grep [opcje] wzorzec [pliki]
+
+-n – wyœwietlany jest numer linii w pliku w których znaleziono dany ci¹g znaków;
+-w – wyszukuje tylko ca³e s³owa;
+-c – zamiast wyœwietlaæ linie ze znalezionym fragmentem wyœwietla liczbê znalezionych linii;
+-v – negacja zapytania
+-r – gdy plik podany do przeszukania jest katalogiem, to zostan¹ przeszukane wszystkie pliki w tym katalogu
+
+grep 'Ala' plik - Znajduje linie zawieraj¹ce wyraz ‘Ala’ w pliku ‘plik’.
+
+grep 'A[lg]a' plik -  Znajduje linie zawieraj¹ce wyraz ‘Ala’ lub ‘Aga’.
+
+grep 'A.a' plik - Znajduje linie zawieraj¹ce wyrazy takie jak ‘Ala’, ‘Asa’, ‘Aaa’ itp.
+
+grep '^Ala' plik - Znajduje linie zawieraj¹ce wyraz ‘Ala’ na pocz¹tku.
+
+grep 'Go+gle' plik - Znajduje linie zawieraj¹ce wyraz ‘Gogle’, ‘Google’, ‘Gooooooogle’ itp.
+
+grep '[0-9]+' - Znajduje linie zawieraj¹ce dowoln¹ liczbê
+
+grep -A 3 -i "example" demo_text - wyszukuje tylko 3 linie ze znalezionym s³owem
+#########################
+
+* › oznacza dowolnej (równie¿ zerowej) d³ugoœci ³añcuch znaków.
+
+? › dowolny pojedynczy znak
+
+[..] › u¿ycie nawiasów kwadratowych mo¿e przybraæ wiele form
+
+[azs] › oznacza, literê „a” lub literê „z” lub literê „s”. Poszukiwany ci¹g znaków musi zawieraæ jedn¹ z tych liter.
+
+[0-9] ›  oznacza liczbê 0 albo 1 albo 2 albo 3 albo 4 albo 5 albo 6 albo 7 albo 8  albo 9
+
+[!rty] › oznacza ka¿dy znak oprócz litery r, t,y
+
+[!0-9] › oznacza ka¿dy znak, który nie jest liczb¹
+
+{..} › mechanizm rozwijania nawiasów

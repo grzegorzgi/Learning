@@ -82,3 +82,32 @@ Function Fib($n)
     }   
 }
 fib -n 5
+
+Function Fib($n)
+{
+    if($n -lt 2)
+    {
+        return $n
+    }
+    else
+    {
+        return (fib($n-1))+(fib($n-2))
+    }   
+}
+fib -n 6
+
+
+Function Fib($n)
+{
+    $a=0
+    $b=1
+
+    for($i=0; $i -le $n; $i++)
+    {
+        Write-Output $a
+        $f=($a+$b)
+        $a=$b
+        $b=$f
+    }
+}
+fib -n 5

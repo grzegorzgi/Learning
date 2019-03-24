@@ -20,3 +20,183 @@ Istotnym elementem jest te¿ automatyzacja procesów, czyli zbudowanie œrodowiska 
 
 Pojêcie DevOps czêsto kojarzy siê z continous integration, deployment, delivery.
 
+
+
+    Git : Version Control System tool
+    CircleCI Jenkins : Continuous Integration tool
+    Selenium : Continuous Testing tool
+    Puppet, Chef, Ansible : Configuration Management and Deployment tools
+    Nagios : Continuous Monitoring tool
+    Docker : Containerization tool
+
+
+
+1. What are the major contenerization tools in DevOps
+
+Docker - narzêdzie do konteneryzacji, pozwala na zarz¹dzanie kontenerami i
+ich obrazami.
+
+rkt - rocket
+
+Azure Container Instance
+Amazon EC2
+
+------
+
+Kubernetes - zarz¹dzania klastrami kontenerów w chmurze. 
+Oferuje moc obliczeniow¹. Mo¿emy ko¿ystaæ z serwerów i u¿ywaæ w³aœnych narzêdzi.
+Albo wykorzystaæ oferowane przez AWS
+
+
+2. What is the role of AWS in DevOps
+
+AWS - jest to  platforma obliczeniowa w chmurze. Udostêpnia zasoby obliczeniowe i us³ugi.
+
+Wykorzystanie rozwi¹zañ w chmurze jest istotne dla DevOps. 
+
+1) Mamy mo¿liwoœæ wykupienie serwerów dziêki którym mo¿emy kozystaæ z w³asnych aplikacji Zarówno do procesu CD jak i dostarczenia us³ug dla klienta.
+Wi¹¿e siê to z mniejszymi kosztami i wieksz¹ elastycznoœci¹ - gdy¿ mo¿emy dodawaæ lub zabieraæ serwery
+
+2) AWS udostêpnia szereg us³ug które wspieraj¹ DevOps 
+- utrzymanie kontenerów
+- rejestr kontenerów 
+- bazy danych
+- narzêdzia do budowy pipelina, testowania, Continous deployment 
+- monitorowanie, zbieranie logów
+
+
+3.What are the virtualization Tools in DevOps
+
+- Amazon Elastic Compute Cloud 
+- Microsoft Azure
+- VirtualBox
+- Vagrant - Vagrant to narzêdzie, które umo¿liwia na podstawie plików konfiguracyjnych
+ utworzenie i skonfigurowanie maszyny wirtualnej
+- Hyper - V
+- docker
+
+
+4.Define ALM (Application Life Cycle Management)
+
+Application Lifecycle Management (ALM, zarz¹dzanie cyklem ¿ycia aplikacji) – 
+ci¹g³y proces zarz¹dzania ¿yciem wytwarzanego oprogramowania,
+
+1) zarz¹dzanie ((ang.) governance) – celem zarz¹dzania w ALM jest zapewnienie, aby tworzone oprogramowanie zawsze spe³nia³o wymagania biznesowe
+2) rozwijanie ((ang.) development) – podstawowy element cyklu ¿ycia aplikacji, w trakcie którego powstaje kod Ÿród³owy oprogramowania
+3) eksploatacja ((ang.) operations)
+
+HP ALM/Quality Center
+Jira
+
+5.What is the most important thing DevOps help us achieve
+
+Wspó³prace i wymiane informacji dziêki której produkt czy jakaœ zmiana jest dostarczana
+szybko i z minimalnym ryzykiem, co prowadzi do wiêkszego zadowoloenia klienta.
+ 
+
+6.Explain the Difference between CI CD CD
+
+--
+
+7. What are some of the DevOps best practices
+
+-Wymiana informacji i wspó³praca miêdzy cz³onkami zespo³ów
+
+- automatyzacja mo¿liwie najwiêkszej iloœci zadañ
+
+- Dostarczanie czêstych ale ma³ych updatów. 
+Sprawia to ¿e zmniejsza siê ryzyko b³êdów i jeœli ju¿ s¹ to mo¿na je szybko zidentyfikowaæ
+
+- infrastruktura jako kod
+
+- ko¿ystanie z ró¿nego rodzjau narzêdzi i rozwi¹zañ w chmurze wspieraj¹cyhc DevOps
+
+- Zbieranie logów i monitorowanie œrodowisk 
+
+
+8. How is DevOps different from Agile/SDLC
+
+Agile skupia siê na szybkim dostarczeniu dzia³aj¹cego i przetestowanego oprogramowania. Nie ma tutaj czêœæi operacji tak jak w DevOps.
+W Agile oprogramowanie nie jest monitorowane tylko przekazane do utrzymania. w DevOps dzia³y develeopment i operations powinny œciœle wspó³pracowaæ, reagowaæ na potrzeby.
+
+Agile skupia siê bardziej na zmianach, devops na ci¹g³ym dostarczaniu i testowaniu
+Agile skupia siê g³ównie na informacji z wrotnej od klienta, DevOps na informacji od ca³ego zespo³u i od kienta. 
+DevOps dziêki skupieniu na komunikacji i automatyzacji dostarcza oprogramowanie szybciej i z szybk¹ informacj¹ zwrotn¹.  
+DevOps skupia siê nie tylko na szybkoœci wytwarzania oprogramowania ale te¿ na automatyzacji procesu.
+DevOps dziêki wyko¿ytaniu wielu narzêdzi i aotomatyzacji jest lepszy dla biznesu ze wzglêdu na ni¿sze koszty.
+Agile stawia dzia³aj¹ce oprogramowanie ponad dobr¹ dokumentacje, dla devops dokumentacjia jest równie wa¿na jak oprogramowanie bo u³atwia prace innym specjalist¹ IT
+
+
+9. Define a typical DevOps work flow
+
+- narzêdzie do planowania i wymiany informacji np slack i jira
+1. Programiœci pracuj¹ z systemem kontroli wersji np. Github czy SVN i aktualizuj¹ repozytorium
+2. Jenkins teamcity,  pobiera zmiany buduje/ kompiluje program np z pomoc¹ mavena
+3. Nastêpnie program jest testowany (selenium, jmiter, python robot)
+4. Otrzymujemy paczkê - release/ artefakt - który mozemy umieœæiæ np w artifactory albo nexusie. lub docker rejestrze, jeœli to jest kontener
+5. Nastêpnie maj¹c godtowy biuld mo¿emy go wdro¿yæ na œrodowiska produkcyjne 
+z pomoc¹ Configuration Management and Deployment tools 
+Puppet, Chef, Ansible na œrodowiska produkcyjne- serwery np AWS, Azure
+6. Monitorowaæ dzia³anie aplikacji œrodowiska - np ekl  albo naigos.
+
+10. What role does QA play in DevOps
+
+Rola QA jest bardzo du¿a. W DevOps rola QA jest zawarta w czêœci Development.
+Ka¿da zmiana wprowadzona przez developerów musi byæ przetestowana. Wypuszczana aplikacja musi przjeœæ przez wszystkie 
+poziomy i typy testów jeœli ma trafiæ do klienta. Du¿y nacisk w devOps k³adzie sie na automatyzacje testów.
+Musimy uzyskaæ pewnoœæ ¿e nasz produkt ma poziom jakoœci, który zadowoli klienta. Testowanie jest nieod³¹czn¹ czêœci¹ CI CD CD.
+
+11. What are the anti-patterns of DevOps
+
+- ma³a lub brak wspó³pracy miedzy Dev - Ops
+- myœlenie o devops jako procec - to kultura, metodologia
+- agile to nie to samo co devops
+- zmiana nazwy teamu albo u¿ycie narzêdzi ,automatyzacji nie wystarczy do devopsa
+
+12. What are the major provisioning tools in devops
+
+Chef  Puppet  Ansible
+
+13. Explain with a use case where DevOps can be used in industry / real-life
+
+Np.
+DevOps œwietnie sprawdza siê w sektorze bankowym. Gdzie orpogramowanie musi rozwijaæ siê dynamicznie i reagowaæ na potrzeby klientów.
+Jeœli bank nie zapewni odpowiednich us³ug klient¹ i nie bêdzie szybko wdra¿a³ nowych rozwi¹zañ mo¿e siê to wi¹zaæ ze stratami.
+ 
+  
+
+14. How is Chef used as a CM tool
+
+Chef jest narzedziem do automatycznej konfiguracji i zarz¹dzania. 
+Pozwala na zarz¹dzanie infrastruktur¹ za pomoca kodu.
+
+Sk³ada siê z g³ównego serwera i nodów. Nondy co jakiœ szas odpytuj¹ serwer czy pojawi³a siê jakaœ nowa konfiguracja.
+Z serwerem  mo¿emy siê komunikowaæ za pomoc¹ knifa - terminala do kumunikacji
+
+
+15. What are the major CI tools 
+
+- Jenkins
+- TeamCity
+- Travis CI
+- Bamboo
+- CircleCI
+
+16. Czym s¹ wzorce projektowe 
+
+Wzorzec projektowy (ang. design pattern) – uniwersalne, sprawdzone w praktyce rozwi¹zanie czêsto pojawiaj¹cych siê, powtarzalnych problemów projektowych.
+Pokazuje powi¹zania i zale¿noœci pomiêdzy klasami oraz obiektami i u³atwia tworzenie, modyfikacjê oraz pielêgnacjê kodu Ÿród³owego
+
+Wzorzec projektowy sk³ada siê z czterech podstawowych elementów:
+
+    nazwy wzorca;
+
+  problemu – opisuje sposoby rozpoznawania sytuacji, w których mo¿emy zastosowaæ dany wzorzec oraz 
+  warunki jakie musz¹ zostaæ spe³nione, by jego zastosowanie mia³o sens;
+
+  rozwi¹zania – opisuje elementy rozwi¹zania: ich relacje, powi¹zania oraz obowi¹zki, 
+  zawiera tak¿e wskazówki implementacyjne dla ró¿nych technologii;
+
+  konsekwencji – zestawienie wad i zalet stosowania wzorca, uwzglêdniaj¹ce informacje o jego 
+  brakach oraz kosztach rozwoju i utrzymania systemu wykorzystuj¹cego dany wzorzec.
+ 

@@ -21,7 +21,6 @@ Monitoring ma na celu dbanie o zdrowie naszej infrastruktury.
 NP. ELK , Elastic schearch, Logstasch , kibana - pozwala na przechowywanie i przesukiwanie du¿ej iloœci danych z logów. Kabana pozwala na wizualizacje informacji.
 
 
-
 Logging aplikacji - logi to nie od³¹czny element aplikacji dziêki którym mo¿na pozyskaæ wiwle informacji.
 Informacji o b³êdach, dzia³aniu aplikacji, wydarzeniach w aplikacji. Odpowiednie praktyki tworzenia, zbierania i analizowania logów pozwalaj¹ zachowaæ przej¿ystoœæ i dostarczyæ cennych informacji.
 

@@ -1,5 +1,9 @@
 ﻿#Array
 $myArray = 5.6, 4, 17, 1, 13,7, 3, 100
+$myArray2 = @(10, 20, 30, 40)
+
+Write-Output $myArray2
+
 $myList = @(0..4)
 Write-host $myList
 

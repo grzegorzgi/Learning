@@ -29,13 +29,18 @@ docker rm nazwa kontenera - usuwa kontener/y
 docker attach ID/nazwa - połączenie sie z danym kontenerem
 
 docker build scieżka do dockerfile - budowanie obrazu z dockerfile  np
-docker build -t mojanazwaobrazu .(aktualna sciezka) 
+docker build -t mojanazwaobrazu:tag .(aktualna sciezka) 
 
 dockerfile to plik konfiguracyjny tworzący dany obraz
 
-docker tag ID TAG - taguje obraz
+docker tag ID TAG nazwa:tag - taguje obraz
 
 docker push repozytorium/nazwa:tag - pushowanie obrazu do repozytorium / resjestru
+
+
+docker commit c16378f943fe rhel-httpd
+docker tag rhel-httpd registry-host:5000/myadmin/rhel-httpd
+docker push registry-host:5000/myadmin/rhel-httpd
 
 ########################################################################
 # Use an official Python runtime as a parent image
